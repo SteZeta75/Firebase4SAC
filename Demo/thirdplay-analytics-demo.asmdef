@@ -1,0 +1,17 @@
+{
+    "name": "thirdplay-analytics-demo",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6d52deec7ec5c43c5b6f6d3c8312b167",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

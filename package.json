@@ -1,0 +1,33 @@
+{
+  "name": "thirdplay-analytics",
+  "version": "1.0.0",
+  "displayName": "ThirdPlay Analytics SDK",
+  "description": "This package contains core apis needed for analytics.",
+  "unity": "6000.0",
+  "unityRelease": "49f1",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Abhishek Agrawal",
+    "email": "abhishekagrawal607@gmail.com",
+    "url": "https://www.unity3d.com"
+  },
+  "samples": [
+    {
+      "displayName": "Demo",
+      "description": "Contains the sample demo",
+      "path": "Samples/Demo"
+    },
+    {
+      "displayName": "Csv-Json Tool",
+      "description": "Contains a node js tool to convert csv to json",
+      "path": "Samples/CsvJsonHelper"
+    }
+  ]
+}
