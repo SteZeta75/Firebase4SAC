@@ -60,7 +60,11 @@ AnalyticsManager.LogEvent("leaderboard_button_clicked");
 
 #### Log an Event with Parameters
 ```csharp
+// Log an event with a parameter
 AnalyticsManager.LogEvent("level_complete", "level_number", 2);
+
+// Log how many times the player started level 3
+AnalyticsManager.LogEvent("level_start", "level_number", 3);
 ```
 
 ## API Reference
@@ -69,7 +73,7 @@ AnalyticsManager.LogEvent("level_complete", "level_number", 2);
 - `AnalyticsManager.LogEvent(string eventName, string paramName, int paramValue)` – Logs an event with a parameter.
 
 ## Support
-For issues or feature requests, please open an issue on the [GitHub repository](https://github.com/your-org/ThirdPlayAnalytics).
+For issues or feature requests, please open an issue on the [GitHub repository](https://github.com/SteZeta75/Firebase4SAC.git).
 
 ---
 © 2025 ThirdPlay. All rights reserved.
