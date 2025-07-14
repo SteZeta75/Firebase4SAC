@@ -73,7 +73,7 @@ AnalyticsManager.LogEvent("level_start", "level_number", 3);
 - `AnalyticsManager.LogEvent(string eventName, string paramName, int paramValue)` – Logs an event with a parameter.
 
 ## Support
-For issues or feature requests, please open an issue on the [GitHub repository](https://github.com/SteZeta75/Firebase4SAC.git).
+For issues or feature requests, please open an issue on the [GitHub repository](https://github.com/SteZeta75/Firebase4SAC/issues).
 
 ---
 © 2025 ThirdPlay. All rights reserved.
