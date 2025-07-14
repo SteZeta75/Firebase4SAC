@@ -23,11 +23,6 @@
       "displayName": "Demo",
       "description": "Contains the sample demo",
       "path": "Samples/Demo"
-    },
-    {
-      "displayName": "Csv-Json Tool",
-      "description": "Contains a node js tool to convert csv to json",
-      "path": "Samples/CsvJsonHelper"
     }
   ]
 }
