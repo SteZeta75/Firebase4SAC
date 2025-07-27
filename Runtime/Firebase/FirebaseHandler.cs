@@ -81,6 +81,31 @@ namespace Firebase
         }
         
         /// <summary>
+        /// Logs an event to Firebase Analytics with a string parameter.
+        /// </summary>
+        /// <param name="eventName">The name of the event to log.</param>
+        /// <param name="paramName">The name of the parameter.</param>
+        /// <param name="paramValue">The integer value of the parameter.</param>
+        public void ReportEvent(string eventName, string paramName, string paramValue)
+        {
+            if (_app == null)
+            {
+                LogError("Firebase app is not initialized.");
+                return;
+            }
+            
+            try
+            {
+                FirebaseAnalytics.LogEvent(eventName, new Parameter(paramName, paramValue));
+                Log($"Event logged: {eventName} with parameter {paramName} = {paramValue}");
+            }
+            catch (Exception ex)
+            {
+                LogError($"Failed to log event '{eventName}' with parameter '{paramName}': {ex.Message}");
+            }
+        }
+        
+        /// <summary>
         /// Logs a message to the Unity console and invokes the debug log event.
         /// </summary>
         /// <param name="message">The message to log.</param>

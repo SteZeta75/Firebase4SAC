@@ -41,13 +41,13 @@ namespace Demo
         public void OnLevelStartClick(int levelNumber)
         {
             // Log a level start event with the level number
-            AnalyticsManager.LogEvent("level_start", "level_number", levelNumber);
+            AnalyticsManager.LogEvent("level_start", "level_number", "Level " + levelNumber);
         }
         
         public void OnLevelCompleteClick(int levelNumber)
         {
             // Log a level complete event with the level number
-            AnalyticsManager.LogEvent("level_complete", "level_number", levelNumber);
+            AnalyticsManager.LogEvent("level_complete", "level_number", "Level " + levelNumber);
         }
 
         #endregion

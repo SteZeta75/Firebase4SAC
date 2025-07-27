@@ -46,4 +46,34 @@ public static class EventNameValidator
         // paramValue is int, so always valid for Firebase
         return true;
     }
+    
+    /// <summary>
+    /// Validates event name, parameter name, and parameter value (as string) for Firebase Analytics.
+    /// </summary>
+    /// <param name="eventName">Event name to validate.</param>
+    /// <param name="paramName">Parameter name to validate.</param>
+    /// <param name="paramValue">Parameter value to validate (string).</param>
+    /// <returns>True if all are valid, false otherwise.</returns>
+    public static bool IsValidEventWithParam(string eventName, string paramName, string paramValue)
+    {
+        if (!IsValid(eventName))
+            return false;
+        if (string.IsNullOrEmpty(paramName))
+            return false;
+        if (paramName.Length >= 40)
+            return false;
+        if (!char.IsLetter(paramName[0]))
+            return false;
+        foreach (char c in paramName)
+        {
+            if (!char.IsLetterOrDigit(c) && c != '_')
+                return false;
+        }
+        // paramValue is string, so always valid for Firebase
+        if (string.IsNullOrEmpty(paramValue))
+            return false;
+        if (paramValue.Length >= 40)
+            return false;
+        return true;
+    }
 }

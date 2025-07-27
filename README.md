@@ -41,8 +41,6 @@ ThirdPlay Analytics SDK is a Unity package that enables easy integration of Fire
 Before logging any events, initialize the analytics system in your game's startup logic:
 
 ```csharp
-using ThirdPlayAnalytics;
-
 void Start() {
     AnalyticsManager.Initialize();
 }

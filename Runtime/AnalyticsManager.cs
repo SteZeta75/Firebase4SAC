@@ -63,6 +63,28 @@ public static class AnalyticsManager
     }
     
     /// <summary>
+    /// Logs an event to the analytics system with a string parameter.
+    /// </summary>
+    /// <param name="eventName">Name of the event.</param>
+    /// <param name="paramName">Name of the parameter.</param>
+    /// <param name="paramValue">Value of the parameter.</param>
+    public static void LogEvent(string eventName, string paramName, string paramValue)
+    {
+        if (firebaseHandler == null)
+        {
+            LogError("Analytics system not initialized. Call Initialize() first.");
+            return;
+        }
+        if (!EventNameValidator.IsValidEventWithParam(eventName, paramName, paramValue))
+        {
+            LogError("Invalid event or parameter name. Event and parameter names must be alphanumeric, start with a letter, be less than 40 characters, and may only contain letters, numbers, and underscores. Parameter name cannot be null or empty.");
+            return;
+        }
+        // Logic to log an event with parameters
+        firebaseHandler.ReportEvent(eventName, paramName, paramValue);
+    }
+    
+    /// <summary>
     /// Logs a message to the Unity console and invokes the debug log event.
     /// </summary>
     /// <param name="message">The message to log.</param>
@@ -71,7 +93,7 @@ public static class AnalyticsManager
         Debug.Log(message);
         DebugLogEvent?.Invoke(message);
     }
-        
+    
     /// <summary>
     /// Logs an error message to the Unity console and invokes the debug log error event.
     /// </summary>
